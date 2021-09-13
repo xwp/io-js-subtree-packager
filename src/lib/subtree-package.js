@@ -45,13 +45,13 @@ class SubtreePackage {
 			const splitTag = `split-${ packageDirRelative }-${ targetVersion }`;
 
 			// Create a local tag that references the split revision.
-			await this.repo.tag( [ splitTag, splitHash.trim() ] );
+			await this.repo.tag( [ splitTag, splitHash.trim(), '--force' ] );
 
 			// Ensure we push that tag to the upstream.
 			pushRevisionPairs.push( `refs/tags/${ splitTag }:refs/tags/${ targetVersion }` );
 		}
 
-		await this.repo.push( remoteUrl, pushRevisionPairs );
+		await this.repo.push( remoteUrl, [ ...pushRevisionPairs, '--no-verify', '--force' ] );
 		await this.repo.deleteLocalBranch( subtreeBranch, true );
 	}
 
