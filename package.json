@@ -9,6 +9,6 @@
 		"src/**/*"
 	],
 	"dependencies": {
-		"simple-git": "^3.20.0"
+		"simple-git": "^2.39.0"
 	}
 }
