@@ -1,6 +1,6 @@
 {
 	"name": "@xwp/subtree-packager",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Split and publish parts of your monorepo to dedicated Git repositories",
 	"author": "XWP",
 	"license": "MIT",
@@ -9,6 +9,6 @@
 		"src/**/*"
 	],
 	"dependencies": {
-		"simple-git": "^2.39.0"
+		"simple-git": "^3.20.0"
 	}
 }
